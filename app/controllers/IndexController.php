@@ -1,16 +1,16 @@
 <?php
 namespace app\controllers;
 
-use System\baseController as baseController;
+use system\baseController;
 
 Class IndexController extends baseController
 {
-	public function __construct(){
-		print '<br />Controller ' . __CLASS__ . ' loaded';
-	}
-
 	public function indexAction(){
-		print '<Br />This is indexAction';
+            $view = new \system\View();
+            $view->header = 'this is my header';
+            $view->footer = 'this is my footer';
+            $view->setTemplate('indexView');
+            
 	}
 
 	public function aboutAction(){

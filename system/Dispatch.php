@@ -16,16 +16,12 @@ class Dispatch
 	public static function getControllerName(){
 		return static::$_controllerName;
 	}
-
 	/*
 	*@return: $_actionName
 	*/
 	public static function getActionName(){
 		return static::$_actionName;
 	}
-
-
-
 	/*Define Controller from URL
 	*@params: void
 	*/
@@ -114,9 +110,11 @@ class Dispatch
 	*/
 	protected function callRequestedObject($controllerName, $actionName)
 	{
+                
 		$controllerName = 'app\controllers\\' . $controllerName . 'Controller';
 
 		$actionName = $actionName . 'Action';
+
 
 		$controller = new $controllerName();
 		$controller->$actionName();

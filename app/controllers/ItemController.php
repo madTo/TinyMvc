@@ -13,18 +13,7 @@ Class ItemController extends baseController
 	public function indexAction(){
 
 	}
-
-	public function secondAction(){
-		print second;
-	}
-
-	public function read(){
-		$id = $_GET['id'];
-
-		$result = $model->selectNews($id);
-
-		$this->load->view("readNews", $result)
-	}
+	
 
 }
 
