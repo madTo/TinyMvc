@@ -2,7 +2,7 @@
 
 namespace system;
 
-
+use system\DataBase;
 
 class baseController
 {
@@ -10,8 +10,12 @@ class baseController
 
 
 	public function __construct(){
-
+            
 	}
+        
+        public function getDB(){
+            return DataBase::getDB();
+        }
 
 
 

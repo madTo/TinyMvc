@@ -23,6 +23,7 @@ define('VIEW_PATH', BASE_PATH . 'app/views/');
     $config = \config\Config::setValue('Controller', \system\Dispatch::getControllerName());
     $config = \config\Config::setValue('Action', \system\Dispatch::getActionName());
     
+    
 
     print '<br />Controller is ' . \config\Config::getValue('Controller');
     print '<br />Action is ' . \config\Config::getValue('Action');
